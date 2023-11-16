@@ -1,0 +1,129 @@
+:root {
+  --color-1: #83dffd;
+  --color-2: #8fe3ff;
+  --color-3: #234876;
+  --color-4: #ffffff;
+  --color-5: #0077ff;
+  --color-6: #005fcc;
+  --color-7: #f1f3f6;
+  --color-8: #e74c3c;
+  --color-9: #333;
+  --font-1: Verdana, Geneva, Tahoma, sans-serif;
+  --font-2: Microsoft-Yaheni;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: url(../img/inventary.png) center/cover no-repeat;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+header>div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+header>div:nth-child(2) {
+  flex-direction: column;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 200px;
+}
+
+.informacion-title {
+  text-align: center;
+}
+
+.informacion-title h1 {
+  color: var(--color-3);
+  font-size: 40px;
+  font-family: var(--font-2);
+  font-weight: bold;
+}
+
+.informacion-title h3 {
+  font-style: var(--font-1);
+}
+
+.input {
+  margin-bottom: 20px;
+}
+
+.input label {
+  font-size: 14px;
+  color: var(--color-9);
+  font-weight: bold;
+  font-family: var(--font-2);
+}
+
+.input input, .input #selCat {
+  padding: 12px;
+  border: 1px solid var(--color-7);
+  font-family: var(--font-2);
+  border-radius: 4px;
+  margin-top: 10px;
+  width: 100%;
+  transition: border-color 0.3s;
+}
+
+.input input:focus {
+  outline: none;
+  border-color: var(--color-2);
+}
+
+.input input:-webkit-autofill,
+.input input:-webkit-autofill:hover,
+.input input:-webkit-autofill:focus,
+.input input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--color-4) inset !important;
+  -webkit-text-fill-color: var(--color-9) !important;
+}
+
+.button {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.btn-regresar,
+.btn-save {
+  padding: 8px 12px;
+  color: var(--color-4);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: var(--color-5);
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.btn-regresar:hover,
+.btn-save:hover {
+  background-color: var(--color-6);
+  cursor: pointer;
+}
+
+/* Estilos Responsivos */
+@media screen and (max-width: 768px) {
+  
+  header {
+    display: block;
+  }  
+  .input,.regresar,.button{
+    padding: 10px;
+  }
+}

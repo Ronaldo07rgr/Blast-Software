@@ -1,0 +1,77 @@
+/* Estilo para el contenedor de la notificación */
+.notify {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fade-in 0.3s ease-in-out forwards;
+}
+
+/* Estilos para el encabezado de la notificación */
+.notify>div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #4caf50;
+    /* Color de fondo para la notificación de éxito */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #fff;
+    /* Color del texto para la notificación de éxito */
+}
+
+.notify>div:first-child.error-head {
+    background-color: #f44336;
+    /* Color de fondo para la notificación de error */
+}
+
+/* Estilos para los iconos en el encabezado de la notificación */
+.notify>div:first-child div {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.notify>div:first-child .fa-check {
+    color: #059669;
+    /* Color del icono de éxito */
+}
+
+.notify>div:first-child .fa-warning {
+    color: #e53935;
+    /* Color del icono de error */
+}
+
+/* Estilos para el contenido de la notificación */
+.notify>div:last-child {
+    padding: 1rem;
+    color: #333333;
+}
+
+/* Animación de entrada para la notificación */
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateX(5rem);
+        -webkit-transform: translateX(5rem);
+        -moz-transform: translateX(5rem);
+        -ms-transform: translateX(5rem);
+        -o-transform: translateX(5rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+}
